@@ -94,11 +94,13 @@ section {
 a:link {
     color: #999999;
     text-decoration: none;
+    transition: .2s ease;
 }
 
 a:visited {
     color: #999999;
     text-decoration: none;
+    transition: .2s ease;
 }
 
 input {
@@ -114,10 +116,12 @@ textarea {
 button {
     color: white;
     background-color: #4aaaa5;
+    transition: .2s ease;
 }
 
 button:hover {
     background-color: teal;
+    transition: .2s ease;
 }
 /* /Colors============================================================ */
 
@@ -159,7 +163,8 @@ section {
     margin-bottom: 40px;
     border: 1px solid #dddddd;
     padding: 30px;
-    flex: 1 0 auto;
+    flex: 1 0 auto;    
+    animation: fadein 1s;
 }
 
 img {
@@ -214,6 +219,7 @@ button {
 
 a:hover {
     color: gray;
+    transition: .2s ease;
 }
 
 .top {
@@ -242,6 +248,7 @@ a:hover {
     height: 250px;
     width: 250px;
     margin: 0 40px 40px 0;
+    cursor: pointer;
 }
 
 #absolute {
@@ -255,13 +262,19 @@ a:hover {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
+    cursor: pointer;
+    transition: .2s ease;
 }
 
 #row {
     display: flex;
 }
 
-#absolute:hover {
+#relative:hover #absolute {
     padding: 24px;
-    cursor: pointer;
+    transition: .2s ease;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
