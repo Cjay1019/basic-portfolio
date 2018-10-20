@@ -260,3 +260,8 @@ a:hover {
 #row {
     display: flex;
 }
+
+#absolute:hover {
+    padding: 24px;
+    cursor: pointer;
+}
